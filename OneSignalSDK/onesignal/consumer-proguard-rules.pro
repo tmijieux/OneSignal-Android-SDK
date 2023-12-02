@@ -83,6 +83,10 @@
 -keep class ** implements com.onesignal.OneSignal$OSRemoteNotificationReceivedHandler {
    void remoteNotificationReceived(android.content.Context, com.onesignal.OSNotificationReceivedEvent);
 }
+-keep class ** implements com.onesignal.NotificationExtenderBase {
+       androidx.core.app.NotificationCompat$Builder extend(androidx.core.app.NotificationCompat$Builder );
+}
+
 
 -keep class com.onesignal.JobIntentService$* {*;}
 
